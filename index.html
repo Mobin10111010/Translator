@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مترجم جهانی</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>مترجم چند زبانه</h1>
+        <div class="translation-container">
+            <div class="input-section">
+                <div class="lang-select">
+                    <label for="source-lang">زبان مبدا:</label>
+                    <div class="lang-search-container">
+                        <input type="text" id="source-lang-search" class="lang-search" placeholder="جستجوی زبان...">
+                        <select id="source-lang" class="lang-dropdown">
+                            <option value="auto">تشخیص خودکار</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="lang-swap-container">
+                    <button id="swap-langs-btn" title="تعویض زبان‌ها">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 17l5 5v-5z"/>
+                            <path d="M7 7l-5 5v-5z"/>
+                            <line x1="12" y1="2" x2="12" y2="22"/>
+                        </svg>
+                    </button>
+                </div>
+                
+                <div class="lang-select">
+                    <label for="target-lang">زبان مقصد:</label>
+                    <div class="lang-search-container">
+                        <input type="text" id="target-lang-search" class="lang-search" placeholder="جستجوی زبان...">
+                        <select id="target-lang" class="lang-dropdown">
+                            <option value="">انتخاب زبان</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-areas">
+                <div class="source-text-container">
+                    <textarea id="source-text" placeholder="متن مبدا را اینجا وارد کنید"></textarea>
+                    <button id="speech-to-text-btn" class="speech-to-text-btn" title="تبدیل گفتار به متن">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                        </svg>
+                    </button>
+                </div>
+                <textarea id="target-text" placeholder="ترجمه در اینجا نمایش داده می‌شود" readonly></textarea>
+            </div>
+            
+            <div class="actions">
+                <button id="translate-btn">ترجمه</button>
+                <button id="clear-btn">پاک کردن</button>
+                <button id="copy-btn">کپی</button>
+                <button id="speak-btn">گفتار</button>
+            </div>
+
+            <div id="loading" class="loading-spinner hidden">
+                <div class="spinner"></div>
+            </div>
+        </div>
+    </div>
+    <script src="translator.js" type="module"></script>
+</body>
+</html>
+<!-- partial -->
+  <script type="module" src="./script.js"></script>
+
+</body>
+</html>
